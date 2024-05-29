@@ -1,4 +1,4 @@
-{
+{    "title": "Air Quality Management System",
     "team": [
         {
             "name": "HARISHANTH A.",
@@ -82,5 +82,7 @@
             "email": "kamalanath@eng.pdn.ac.lk"
         }
     ],
-    "tags": [Air Quality Management System]
+    "tags": [
+        "Air Quality Management System", "Industrial Systems", "OpenTwin", "Digital Twin"
+    ]
 }
