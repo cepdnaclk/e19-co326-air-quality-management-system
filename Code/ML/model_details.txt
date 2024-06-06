@@ -1,0 +1,8 @@
+1 - Normal situation - Activity: clean air, a person sleeping or studying or resting
+2 - Preparing meals - Activities: cooking meat or pasta, fried vegetables. One or two people in the room, forced air circulation
+3 - Presence of smoke - Activity: burning paper and wood for a short period of time in a room with closed windows and doors
+4 - Cleaning - Activity: use of spray and liquid detergents with ammonia and / or alcohol. Forced air circulation can be activated or deactivated 
+
+
+MQ sensors (MQ2, MQ9, MQ135, MQ137, MQ138) which have great sensitivity, low latency and low cost; each sensor can respond to different gases;
+Analog CO2 gas sensor (MG-811) which has excellent sensitivity to carbon dioxide and is scarcely affected by the temperature and humidity of the air.
