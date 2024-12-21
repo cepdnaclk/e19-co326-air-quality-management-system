@@ -1,0 +1,34 @@
+{
+    "attributes": {
+      "type": "sensor",
+      "location": "City Center",
+      "description": "Monitors PM2.5, PM10, CO2, and Ozone levels"
+    },
+    "features": {
+      "pm25": {
+        "properties": {
+          "value": 0,
+          "unit": "µg/m³"
+        }
+      },
+      "pm10": {
+        "properties": {
+          "value": 0,
+          "unit": "µg/m³"
+        }
+      },
+      "co2": {
+        "properties": {
+          "value": 0,
+          "unit": "ppm"
+        }
+      },
+      "ozone": {
+        "properties": {
+          "value": 0,
+          "unit": "ppb"
+        }
+      }
+    }
+  }
+  

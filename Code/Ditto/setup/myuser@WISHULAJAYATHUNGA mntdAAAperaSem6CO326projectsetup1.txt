@@ -1,0 +1,193 @@
+root@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup# su - myuser
+myuser@WISHULAJAYATHUNGA:~$ cd /mnt/d/AAApera/Sem6/CO326/project/setup
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUSRESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-lgvbk   0/1     Pending0          16m
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     ContainerCreating0          16m
+opentwins-ditto-gateway-86dd95d46c-49vsz        0/1     Pending0          16m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Init:0/10          16m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     ContainerCreating0          16m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     ContainerCreating0          16m
+opentwins-ditto-thingssearch-8fcb67669-zlxbx    0/1     ContainerCreating0          16m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Init:0/20          16m
+opentwins-influxdb2-0                           0/1     ContainerCreating0          16m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Init:0/10          16m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Init:0/10          16m
+opentwins-post-install-ditto-default-nb57f      0/1     ContainerCreating0          16m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     ContainerCreating0          16m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUSRESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-lgvbk   0/1     Pending0          17m
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     ContainerCreating0          17m
+opentwins-ditto-gateway-86dd95d46c-49vsz        0/1     Pending
+0          17m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Init:0/1
+0          17m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     ContainerCreating0          17m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     ContainerCreating0          17m
+opentwins-ditto-thingssearch-8fcb67669-zlxbx    0/1     ContainerCreating0          17m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Init:0/2
+0          17m
+opentwins-influxdb2-0                           0/1     ContainerCreating0          17m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Init:0/1
+0          17m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Init:0/1
+0          17m
+opentwins-post-install-ditto-default-nb57f      0/1     ContainerCreating0          17m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     ContainerCreating0          17m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUS
+RESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-lgvbk   0/1     Pending
+0          20m
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     ContainerCreating0          20m
+opentwins-ditto-gateway-86dd95d46c-49vsz        0/1     Pending
+0          20m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Init:0/1
+0          20m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     ContainerCreating0          20m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     ContainerCreating0          20m
+opentwins-ditto-thingssearch-8fcb67669-zlxbx    0/1     ContainerCreating0          20m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Init:0/2
+0          20m
+opentwins-influxdb2-0                           0/1     ContainerCreating0          20m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Init:0/1
+0          20m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Init:0/1
+0          20m
+opentwins-post-install-ditto-default-nb57f      0/1     ContainerCreating0          20m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     ContainerCreating0          20m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUSRESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-lgvbk   0/1     Pending
+0          22m
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     ContainerCreating0          22m
+opentwins-ditto-gateway-86dd95d46c-49vsz        0/1     Pending
+0          22m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Init:0/1
+0          22m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     ContainerCreating0          22m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     ContainerCreating0          22m
+opentwins-ditto-thingssearch-8fcb67669-zlxbx    0/1     ContainerCreating0          22m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Init:0/2
+0          22m
+opentwins-influxdb2-0                           0/1     ContainerCreating0          22m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Init:0/1
+0          22m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Init:0/1
+0          22m
+opentwins-post-install-ditto-default-nb57f      0/1     ContainerCreating0          22m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     ContainerCreating0          22m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+^C
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+Unable to connect to the server: net/http: TLS handshake timeout
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUS
+RESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-lgvbk   0/1     Pending
+0          31m
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     ContainerCreating0          31m
+opentwins-ditto-gateway-86dd95d46c-49vsz        0/1     Pending
+0          31m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Init:0/1
+0          31m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     ContainerCreating0          31m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     ContainerCreating0          31m
+opentwins-ditto-thingssearch-8fcb67669-zlxbx    0/1     Running
+0          31m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Init:0/2
+0          31m
+opentwins-influxdb2-0                           0/1     ContainerCreating0          31m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Init:0/1
+0          31m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Init:0/1
+0          31m
+opentwins-post-install-ditto-default-nb57f      0/1     ContainerCreating0          31m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     ContainerCreating0          31m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUS         RESTARTS   AGE
+opentwins-ditto-extended-api-65b8586b49-rbktk   0/1     Terminating    0      35m
+opentwins-ditto-nginx-89dc798cc-lhvdt           0/1     Terminating    0      35m
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     Terminating    0      35m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     Terminating    0      35m
+opentwins-grafana-7d4cfbd857-4lblc              0/2     Terminating    0      35m
+opentwins-influxdb2-0                           0/1     Terminating    0      35m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Terminating    0      35m
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Terminating    0      35m
+opentwins-post-install-ditto-default-nb57f      0/1     ErrImagePull   0      35m
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     Terminating    0      35m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+Unable to connect to the server: http2: client connection lost
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUS
+RESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-r2w6k   0/1     ContainerCreating0          3m11s
+opentwins-ditto-extended-api-65b8586b49-fzzvs   0/1     ContainerCreating0          61s
+opentwins-ditto-gateway-86dd95d46c-c9tdm        0/1     Pending
+0          3m11s
+opentwins-ditto-nginx-7d4f9c74fc-hpbdt          0/1     Init:0/1
+0          3m11s
+opentwins-ditto-policies-6fd5d86476-ggbjm       0/1     Pending
+0          3m6s
+opentwins-ditto-policies-6fd5d86476-stzdn       0/1     Terminating
+0          39m
+opentwins-ditto-things-7c559474cd-86gxs         0/1     Terminating
+0          39m
+opentwins-ditto-things-7c559474cd-86t7t         0/1     Pending
+0          2m49s
+opentwins-ditto-thingssearch-8fcb67669-8t52j    0/1     Pending
+0          2m19s
+opentwins-grafana-7d4cfbd857-l5r4p              0/2     Pending
+0          2m14s
+opentwins-influxdb2-0                           0/1     Terminating
+0          39m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Terminating
+0          39m
+opentwins-mongodb-657dfd5646-j669r              0/1     Pending
+0          62s
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Terminating
+0          39m
+opentwins-mosquitto-66d8f6955c-hc8mx            0/1     Init:0/1
+0          62s
+opentwins-post-install-ditto-default-nb57f      0/1     ErrImagePull0          39m
+opentwins-telegraf-c6b9bddc-9cdxm               0/1     ContainerCreating0          62s
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     Terminating
+0          39m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+NAME                                            READY   STATUS
+RESTARTS   AGE
+opentwins-ditto-connectivity-85896d76b6-r2w6k   0/1     ContainerCreating0          3m43s
+opentwins-ditto-extended-api-65b8586b49-fzzvs   0/1     ContainerCreating0          93s
+opentwins-ditto-gateway-86dd95d46c-c9tdm        0/1     ContainerCreating0          3m43s
+opentwins-ditto-nginx-7d4f9c74fc-hpbdt          0/1     Init:0/1
+0          3m43s
+opentwins-ditto-policies-6fd5d86476-ggbjm       0/1     Pending
+0          3m38s
+opentwins-ditto-things-7c559474cd-86gxs         0/1     Terminating
+0          39m
+opentwins-ditto-things-7c559474cd-86t7t         0/1     Pending
+0          3m21s
+opentwins-ditto-thingssearch-8fcb67669-8t52j    0/1     Pending
+0          2m51s
+opentwins-grafana-7d4cfbd857-l5r4p              0/2     Pending
+0          2m46s
+opentwins-influxdb2-0                           0/1     Terminating
+0          39m
+opentwins-mongodb-657dfd5646-26pk5              0/1     Terminating
+0          39m
+opentwins-mongodb-657dfd5646-j669r              0/1     Pending
+0          94s
+opentwins-mosquitto-66d8f6955c-4kcm4            0/1     Terminating
+0          39m
+opentwins-mosquitto-66d8f6955c-hc8mx            0/1     Init:0/1
+0          94s
+opentwins-post-install-ditto-default-nb57f      0/1     ErrImagePull0          39m
+opentwins-telegraf-c6b9bddc-9cdxm               0/1     ContainerCreating0          94s
+opentwins-telegraf-c6b9bddc-bdp8c               0/1     Terminating
+0          39m
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins
+^C
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get pods -n opentwins

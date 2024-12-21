@@ -1,0 +1,17 @@
+{
+    "entries": {
+      "consumer1": {
+        "subjects": {
+          "nginx:consumer1": {
+            "type": "nginx"
+          }
+        },
+        "resources": {
+          "thing:/namespace:air-quality-sensor": {
+            "grant": ["READ"]
+          }
+        }
+      }
+    }
+  }
+  

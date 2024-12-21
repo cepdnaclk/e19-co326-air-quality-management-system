@@ -1,0 +1,17 @@
+{
+    "entries": {
+      "operator1": {
+        "subjects": {
+          "nginx:operator1": {
+            "type": "nginx"
+          }
+        },
+        "resources": {
+          "thing:/namespace:purifier-device": {
+            "grant": ["READ", "WRITE"]
+          }
+        }
+      }
+    }
+  }
+  
