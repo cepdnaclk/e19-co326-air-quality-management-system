@@ -96,7 +96,3 @@ The AQMS is built on a microservices architecture, ensuring modularity, scalabil
 
 * Docker: For containerizing microservices.
 * Kubernetes: For orchestrating containerized services.
-
-## Please refer the instructions in below URL:
-
-https://projects.ce.pdn.ac.lk/docs/how-to-add-a-project
