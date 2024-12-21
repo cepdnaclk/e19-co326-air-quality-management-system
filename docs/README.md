@@ -26,7 +26,7 @@ This is a sample image, to show how to add images to your page. To learn more op
 -  E/19/142, ILLANGARATHNE Y.M.H.V., [email](e19142@eng.pdn.ac.lk)
 -  E/19/155, JAYARATHNA B.R.U.K., [email](e19155@eng.pdn.ac.lk)
 -  E/19/163, JAYASUNDARA J.M.E.G., [email](e19163@eng.pdn.ac.lk)
--  E/19/166, LAYATHUNGA W.W.K., [email](e19166@eng.pdn.ac.lk)
+-  E/19/166, JAYATHUNGA W.W.K., [email](e19166@eng.pdn.ac.lk)
 -  E/19/167, JAYAWARDENA H.D.N.S., [email](e19167@eng.pdn.ac.lk)
 -  E/19/170, JAYAWARDHANA, [email](e19170@eng.pdn.ac.lk)
 -  E/19/193, KAUSHALYA N.V.K., [email](e19193@eng.pdn.ac.lk)
