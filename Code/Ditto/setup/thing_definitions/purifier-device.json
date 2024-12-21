@@ -1,0 +1,21 @@
+{
+    "attributes": {
+      "type": "device",
+      "location": "Office Building",
+      "description": "Controls air purification levels"
+    },
+    "features": {
+      "purification_level": {
+        "properties": {
+          "value": 0,
+          "unit": "%"
+        }
+      },
+      "status": {
+        "properties": {
+          "value": "off"
+        }
+      }
+    }
+  }
+  

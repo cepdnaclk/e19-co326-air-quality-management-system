@@ -1,0 +1,456 @@
+root@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup# su - myuser
+myuser@WISHULAJAYATHUNGA:~$ cd /mnt/d/AAApera/Sem6/CO326/project/setup
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl delete pods --all -n opentwins
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl get all -n opentwins
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+The connection to the server 127.0.0.1:51706 was refused - did you specify the right host or port?
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start --cpus 4 --disk-size 40gb --memory 8192 -p opentwins
+😄  [opentwins] minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the docker driver based on existing profile
+
+❌  Exiting due to RSRC_OVER_ALLOC_MEM: Requested memory allocation 8192MB is more than your system limit 3664MB.
+💡  Suggestion: Start minikube with less memory allocated: 'minikube start --memory=2200mb'
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start --cpus 4 --disk-size 40gb --memory 3664 -p opentwins
+😄  [opentwins] minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the docker driver based on existing profile
+
+🧯  The requested memory allocation of 3664MiB does not leave room for system overhead (total system memory: 3664MiB). You may face stability issues.
+💡  Suggestion: Start minikube with less memory allocated: 'minikube start --memory=2200mb'
+
+
+🧯  The requested memory allocation of 3664MiB does not leave room for system overhead (total system memory: 3664MiB). You may face stability issues.
+💡  Suggestion: Start minikube with less memory allocated: 'minikube start --memory=2200mb'
+
+❗  You cannot change the memory size for an existing minikube cluster. Please first delete the cluster.
+👍  Starting "opentwins" primary control-plane node in "opentwins" cluster
+🚜  Pulling base image v0.0.44 ...
+🤷  docker "opentwins" container is missing, will recreate.
+🔥  Creating docker container (CPUs=4, Memory=2200MB) ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+❗  Enabling 'default-storageclass' returned an error: running callbacks: [sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.30.0/kubectl apply --force -f /etc/kubernetes/addons/storageclass.yaml: Process exited with status 1
+stdout:
+
+stderr:
+error: error validating "/etc/kubernetes/addons/storageclass.yaml": error validating data: failed to download openapi: Get "https://localhost:8443/openapi/v2?timeout=32s": dial tcp [::1]:8443: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
+]
+❗  Enabling 'storage-provisioner' returned an error: running callbacks: [sudo KUBECONFIG=/var/lib/minikube/kubeconfig /var/lib/minikube/binaries/v1.30.0/kubectl apply --force -f /etc/kubernetes/addons/storage-provisioner.yaml:Process exited with status 1
+stdout:
+
+stderr:
+error: error validating "/etc/kubernetes/addons/storage-provisioner.yaml": error validating data: failed to download openapi: Get "https://localhost:8443/openapi/v2?timeout=32s": dial tcp [::1]:8443: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
+]
+🌟  Enabled addons:
+
+❌  Exiting due to K8S_APISERVER_MISSING: wait 6m0s for node: wait for apiserver proc: apiserver process never appeared
+💡  Suggestion: Check that the provided apiserver flags are valid, and thatSELinux is disabled
+🍿  Related issues:
+    ▪ https://github.com/kubernetes/minikube/issues/4536
+    ▪ https://github.com/kubernetes/minikube/issues/6014
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl create namespace opentwins
+Unable to connect to the server: EOF
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube s
+tatus
+❗  Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 6.25202231s
+💡  Restarting the docker service may improve performance.
+minikube
+type: Control Plane
+host: Running
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Configured
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube s
+tart
+😄  minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+🏃  Updating the running docker "minikube" container ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+💢  initialization failed, will try again: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+    ▪ Generating certificates and keys ...
+
+💣  Error starting cluster: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+❌  Exiting due to GUEST_START: failed to start node: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl create namespace opentwins
+Unable to connect to the server: EOF
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl config current-context
+minikube
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube stop
+✋  Stopping node "minikube"  ...
+🛑  Powering off "minikube" via SSH ...
+🛑  1 node stopped.
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start
+😄  minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+🔄  Restarting existing docker container for "minikube" ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+💢  initialization failed, will try again: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+    ▪ Generating certificates and keys ...
+
+💣  Error starting cluster: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+❌  Exiting due to GUEST_START: failed to start node: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube status
+E0606 20:19:30.196847    6332 status.go:417] kubeconfig endpoint: get endpoint: "minikube" does not appear in /home/myuser/.kube/config
+minikube
+type: Control Plane
+host: Running
+kubelet: Stopped
+apiserver: Stopped
+kubeconfig: Misconfigured
+
+
+WARNING: Your kubectl is pointing to stale minikube-vm.
+To fix the kubectl context, run `minikube update-context`
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube update-context
+🎉  "minikube" context has been updated to point to 127.0.0.1:61226
+💗  Current context is "minikube"
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start
+😄  minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the docker driver based on existing profile
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+🏃  Updating the running docker "minikube" container ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+💢  initialization failed, will try again: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+    ▪ Generating certificates and keys ...
+
+💣  Error starting cluster: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+❌  Exiting due to GUEST_START: failed to start node: wait: /bin/bash -c "sudo env PATH="/var/lib/minikube/binaries/v1.30.0:$PATH" kubeadm init --config /var/tmp/minikube/kubeadm.yaml  --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,DirAvailable--var-lib-minikube,DirAvailable--var-lib-minikube-etcd,FileAvailable--etc-kubernetes-manifests-kube-scheduler.yaml,FileAvailable--etc-kubernetes-manifests-kube-apiserver.yaml,FileAvailable--etc-kubernetes-manifests-kube-controller-manager.yaml,FileAvailable--etc-kubernetes-manifests-etcd.yaml,Port-10250,Swap,NumCPU,Mem,SystemVerification,FileContent--proc-sys-net-bridge-bridge-nf-call-iptables": Process exited with status 1
+stdout:
+[init] Using Kubernetes version: v1.30.0
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of yourinternet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[certs] Using certificateDir folder "/var/lib/minikube/certs"
+[certs] Using existing ca certificate authority
+[certs] Using existing apiserver certificate and key on disk
+
+stderr:
+        [WARNING Swap]: swap is supported for cgroup v2 only; the NodeSwap feature gate of the kubelet is beta but disabled by default
+        [WARNING Service-Kubelet]: kubelet service is not enabled, please run 'systemctl enable kubelet.service'
+        [WARNING DirAvailable--var-lib-minikube-etcd]: /var/lib/minikube/etcd is not empty
+error execution phase certs/apiserver-kubelet-client: [certs] certificate apiserver-kubelet-client not signed by CA certificate ca: x509: certificate signed by unknown authority (possibly because of "crypto/rsa: verification error" while trying to verify candidate authority certificate "minikubeCA")
+To see the stack trace of this error execute with --v=5 or higher
+
+
+╭───────────────────────────────────────────────────────────────────────────────────────────╮
+│
+                │
+│    😿  If the above advice does not help, please let us know:
+                │
+│    👉  https://github.com/kubernetes/minikube/issues/new/choose
+                │
+│
+                │
+│    Please run `minikube logs --file=logs.txt` and attach logs.txt to the GitHub issue.    │
+│
+                │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube delete
+🔥  Deleting "minikube" in docker ...
+🔥  Deleting container "minikube" ...
+🔥  Removing /home/myuser/.minikube/machines/minikube ...
+💀  Removed all traces of the "minikube" cluster.
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ sudo rm -rf /var/lib/minikube
+[sudo] password for myuser:
+Sorry, try again.
+[sudo] password for myuser:
+myuser is not in the sudoers file.  This incident will be reported.
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ sudo rm -rf /etc/kubernetes
+[sudo] password for myuser:
+myuser is not in the sudoers file.  This incident will be reported.
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start
+😄  minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Automatically selected the docker driver
+📌  Using Docker driver with root privileges
+❗  For an improved experience it's recommended to use Docker Engine instead of Docker Desktop.
+Docker Engine installation instructions: https://docs.docker.com/engine/install/#server
+👍  Starting "minikube" primary control-plane node in "minikube" cluster
+🚜  Pulling base image v0.0.44 ...
+🔥  Creating docker container (CPUs=2, Memory=2200MB) ...
+🐳  Preparing Kubernetes v1.30.0 on Docker 26.1.1 ...
+    ▪ Generating certificates and keys ...
+    ▪ Booting up control plane ...
+    ▪ Configuring RBAC rules ...
+🔗  Configuring bridge CNI (Container Networking Interface) ...
+🔎  Verifying Kubernetes components...
+    ▪ Using image gcr.io/k8s-minikube/storage-provisioner:v5
+❗  Executing "docker container inspect minikube --format={{.State.Status}}" took an unusually long time: 27.712950631s
+💡  Restarting the docker service may improve performance.
+🌟  Enabled addons: default-storageclass, storage-provisioner
+🏄  Done! kubectl is now configured to use "minikube" cluster and "default"namespace by default
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ minikube start --cpus 4 --disk-size 40gb --memory 2200 -p opentwins
+😄  [opentwins] minikube v1.33.1 on Ubuntu 22.04 (amd64)
+✨  Using the  driver based on existing profile
+
+❌  Exiting due to DRV_UNSUPPORTED_OS: The driver '' is not supported on linux/amd64
+
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ kubectl create namespace opentwins
+namespace/opentwins created
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ helm repoadd ertis https://ertis-research.github.io/Helm-charts/
+"ertis" already exists with the same configuration, skipping
+myuser@WISHULAJAYATHUNGA:/mnt/d/AAApera/Sem6/CO326/project/setup$ helm upgrade --install opentwins ertis/OpenTwins -n opentwins --dependency-update --debug
+history.go:56: [debug] getting history for release opentwins
+Release "opentwins" does not exist. Installing it now.
+install.go:222: [debug] Original chart version: ""
+install.go:239: [debug] CHART PATH: /home/myuser/.cache/helm/repository/OpenTwins-0.5.17.tgz
+
+client.go:142: [debug] creating 62 resource(s)
+client.go:142: [debug] creating 1 resource(s)
+client.go:712: [debug] Watching for changes to Job opentwins-post-install-ditto-default with timeout of 5m0s
+client.go:740: [debug] Add/Modify event for opentwins-post-install-ditto-default: ADDED
+client.go:779: [debug] opentwins-post-install-ditto-default: Jobs active: 0, jobs failed: 0, jobs succeeded: 0
+client.go:740: [debug] Add/Modify event for opentwins-post-install-ditto-default: MODIFIED
+client.go:779: [debug] opentwins-post-install-ditto-default: Jobs active: 1, jobs failed: 0, jobs succeeded: 0
+W0606 21:32:54.549571    8873 reflector.go:470] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: watch of *unstructured.Unstructured ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+W0606 21:33:20.913822    8873 reflector.go:547] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+I0606 21:33:22.854725    8873 trace.go:236] Trace[729487903]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232 (06-Jun-2024 21:32:57.978) (total time: 23822ms):
+Trace[729487903]: ---"Objects listed" error:Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout 21937ms (21:33:19.915)
+Trace[729487903]: [23.822244932s] [23.822244932s] END
+E0606 21:33:23.505902    8873 reflector.go:150] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+W0606 21:33:54.765853    8873 reflector.go:547] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+I0606 21:34:00.145318    8873 trace.go:236] Trace[220023256]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232 (06-Jun-2024 21:33:29.292) (total time: 27725ms):
+Trace[220023256]: ---"Objects listed" error:Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout 25275ms (21:33:54.568)
+Trace[220023256]: [27.725317407s] [27.725317407s] END
+E0606 21:34:02.271008    8873 reflector.go:150] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+W0606 21:34:53.376514    8873 reflector.go:547] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+I0606 21:34:59.643728    8873 trace.go:236] Trace[342788800]: "Reflector ListAndWatch" name:k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232 (06-Jun-2024 21:34:08.594) (total time: 47204ms):
+Trace[342788800]: ---"Objects listed" error:Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout 44601ms (21:34:53.196)
+Trace[342788800]: [47.204597034s] [47.204597034s] END
+E0606 21:35:02.713397    8873 reflector.go:150] k8s.io/client-go@v0.30.0/tools/cache/reflector.go:232: Failed to watch *unstructured.Unstructured: failed to list *unstructured.Unstructured: Get "https://127.0.0.1:61329/apis/batch/v1/namespaces/opentwins/jobs?fieldSelector=metadata.name%3Dopentwins-post-install-ditto-default&resourceVersion=3709": net/http: TLS handshake timeout
+^C
+Release opentwins has been cancelled.
+
+^C
