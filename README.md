@@ -8,17 +8,6 @@ ___
 * Features
 * Architecture
 * Technologies Used
-* Installation Guide
-  * Prerqquisites
-  * Setup Steps
-* Usage
-  * Monitoring Dashboard
-  * Data Prediction
-  * 3D Visualization
-* Repository Structure
-* Contributing
-* License
-* Acknowledgements
 ___
 ## Overview
 The AQMS is a cutting-edge solution designed to address the increasing need for effective air quality monitoring in urban and industrial environments. Inspired by the latest advancements in Industry 4.0, our system integrates:
