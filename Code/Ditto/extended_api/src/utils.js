@@ -7,4 +7,3 @@ exports.handleAxiosError = (error) => {
       console.error(`Request Error: ${error.message}`);
     }
   };
-  
