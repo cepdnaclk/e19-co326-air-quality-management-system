@@ -42,7 +42,6 @@ app.get('/policy/:id', async (req, res) => {
     res.status(500).send({ error: error.message });
   }
 });
-
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
