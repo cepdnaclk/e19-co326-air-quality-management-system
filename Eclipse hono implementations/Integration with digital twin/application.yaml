@@ -1,5 +1,0 @@
-spring:
-  kafka:
-    bootstrap-servers: kafka-service.local:9092
-  telemetry:
-    topic: telemetry/air-quality-project
