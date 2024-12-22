@@ -1,0 +1,13 @@
+##########################################
+nginx installation
+##########################################
+sudo apt update
+sudo apt install -y nginx
+##########################################
+
+
+##########################################
+To get the internal address run following command
+
+minikube service -n <your-own-name-space> <service name> --url -p <name-of-the-profile>
+##########################################

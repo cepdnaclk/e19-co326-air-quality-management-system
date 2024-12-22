@@ -1,0 +1,17 @@
+##########################################
+navigate to,
+/etc/nginx/sites-available/
+##########################################
+
+##########################################
+if available edit or not available create,
+reverse-proxy.conf
+##########################################
+
+##########################################
+after updating reverse-proxy.conf,
+run the following:
+
+sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl restart nginx
