@@ -1,0 +1,10 @@
+hono:
+  resourceLimits:
+    prometheusBased:
+      cacheMaxSize: 15500
+      cacheMinSize: 5555
+      cacheTimeout: 555
+      connectTimeout: 777
+      queryTimeout: 2222
+      host: "prometheus"
+      port: 888
