@@ -85,3 +85,12 @@ The AQMS is built on a microservices architecture, ensuring modularity, scalabil
 
 * Docker: For containerizing microservices.
 * Kubernetes: For orchestrating containerized services.
+
+
+## Links
+
+- [Project Documentation](https://docs.google.com/document/d/1XviPpqcS2rh5lh2nsUYSRIaxFg3r1NHvLa8BCDi7I6w/edit?usp=sharing)
+- [Project Repository](https://github.com/cepdnaclk/e19-co326-air-quality-management-system)
+- [Project Page](https://cepdnaclk.github.io/e19-co326-air-quality-management-system/)
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)
