@@ -1,0 +1,38 @@
+##########################################
+Install Minikube
+##########################################
+
+sudo apt update
+sudo apt install -y curl wget apt-transport-https
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+##########################################
+Install Kubectl (Kubernetes CLI)
+##########################################
+
+sudo apt update
+sudo apt install -y apt-transport-https
+curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-add-repository "deb https://apt.kubernetes.io/ kubernetes-xenial main"
+sudo apt update
+sudo apt install -y kubectl
+
+##########################################
+Install Docker
+##########################################
+
+sudo apt update
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+sudo apt update
+sudo apt install -y docker-ce
+sudo systemctl enable docker
+sudo systemctl start docker
+
+##########################################
+Install Helm
+##########################################
+
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
