@@ -1,0 +1,15 @@
+##########################################
+ Create a New User
+sudo adduser newuser
+
+##########################################
+Switch to the New User
+su - newuser
+
+##########################################
+Create an SSH Key Pair
+ssh-keygen -t rsa -b 4096 -C "newuser@example.com"
+
+##########################################
+Add the Public Key to the VM
+ssh-copy-id -i ~/.ssh/newuser_rsa.pub newuser@<VM-IP>
