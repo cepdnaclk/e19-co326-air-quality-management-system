@@ -36,3 +36,14 @@ Install Helm
 ##########################################
 
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+
+##########################################
+add user to the docker group
+##########################################
+sudo usermod -aG docker $USER
+newgrp docker
+
+##########################################
+Restart Docker 
+##########################################
+sudo systemctl restart docker
